@@ -16,7 +16,7 @@ Public Class GraphicsExamplesForm
     End Function
 
     Sub DrawWithMouse(oldX As Integer, oldY As Integer, newX As Integer, newY As Integer)
-        Dim g As Graphics = Me.CreateGraphics
+        Dim g As Graphics = DrawingPictureBox.CreateGraphics
         Dim pen As New Pen(ForeGroundColor)
 
 
@@ -27,7 +27,7 @@ Public Class GraphicsExamplesForm
 
     'event handlers*****************************************************************************
 
-    Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove, Me.MouseDown
+    Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseMove, DrawingPictureBox.MouseDown
         Static oldX, oldY As Integer
         Me.Text = $"({e.X},{e.Y}) {e.Button.ToString}"
         Select Case e.Button.ToString
@@ -43,9 +43,6 @@ Public Class GraphicsExamplesForm
         oldY = e.Y
     End Sub
 
-    Private Sub GraphicsExamplesForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-    End Sub
-
     Private Sub ForegroundColorTopMenuItem_Click(sender As Object, e As EventArgs) Handles ForegroundColorTopMenuItem.Click, ForegroundColorContextMenuItem.Click
         Dim result As DialogResult = ColorDialog.ShowDialog()
         If result.ToString = "OK" Then
@@ -58,6 +55,6 @@ Public Class GraphicsExamplesForm
     End Sub
 
     Private Sub ClearContextMenuItem_Click(sender As Object, e As EventArgs) Handles ClearContextMenuItem.Click
-        Me.Refresh()
+        DrawingPictureBox.Refresh()
     End Sub
 End Class
