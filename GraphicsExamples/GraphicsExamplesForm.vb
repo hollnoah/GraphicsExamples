@@ -66,16 +66,24 @@ Public Class GraphicsExamplesForm
     'event handlers*****************************************************************************
     Private Sub GraphicsExamplesForm_Click(sender As Object, e As EventArgs) Handles Me.Click
         Me.Refresh()
-        DrawLine()
-        DrawRectangle()
-        DrawEllipse()
+        'DrawLine()
+        ' DrawRectangle()
+        'DrawEllipse()
         DrawString()
     End Sub
 
-    Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+    Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove, Me.MouseDown
         Static oldX, oldY As Integer
-        Me.Text = $"({e.X},{e.Y})"
-        DrawWithMouse(oldX, oldY, e.X, e.Y)
+        Me.Text = $"({e.X},{e.Y}) {e.Button.ToString}"
+        Select Case e.Button.ToString
+            Case "Left"
+                DrawWithMouse(oldX, oldY, e.X, e.Y)
+            Case "Right"
+                'Ignore
+            Case "Middle"
+                'TODO
+        End Select
+
         oldX = e.X
         oldY = e.Y
     End Sub
@@ -93,4 +101,5 @@ Public Class GraphicsExamplesForm
         End If
 
     End Sub
+
 End Class
