@@ -65,7 +65,7 @@ Partial Class GraphicsExamplesForm
         'ForegroundColorTopMenuItem
         '
         Me.ForegroundColorTopMenuItem.Name = "ForegroundColorTopMenuItem"
-        Me.ForegroundColorTopMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ForegroundColorTopMenuItem.Size = New System.Drawing.Size(213, 26)
         Me.ForegroundColorTopMenuItem.Text = "Foreground & Color"
         '
         'HelpToolStripMenuItem
@@ -79,36 +79,36 @@ Partial Class GraphicsExamplesForm
         Me.MainContextMenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MainContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForegroundColorContextMenuItem, Me.BackgroundColorContextMenuItem, Me.WidthContextMenuItem, Me.FontContextMenuItem, Me.ClearContextMenuItem})
         Me.MainContextMenuStrip.Name = "MainContextMenuStrip"
-        Me.MainContextMenuStrip.Size = New System.Drawing.Size(211, 152)
+        Me.MainContextMenuStrip.Size = New System.Drawing.Size(198, 124)
         '
         'ForegroundColorContextMenuItem
         '
         Me.ForegroundColorContextMenuItem.Name = "ForegroundColorContextMenuItem"
-        Me.ForegroundColorContextMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.ForegroundColorContextMenuItem.Size = New System.Drawing.Size(197, 24)
         Me.ForegroundColorContextMenuItem.Text = "Foreground Color"
         '
         'BackgroundColorContextMenuItem
         '
         Me.BackgroundColorContextMenuItem.Name = "BackgroundColorContextMenuItem"
-        Me.BackgroundColorContextMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.BackgroundColorContextMenuItem.Size = New System.Drawing.Size(197, 24)
         Me.BackgroundColorContextMenuItem.Text = "Background Color"
         '
         'WidthContextMenuItem
         '
         Me.WidthContextMenuItem.Name = "WidthContextMenuItem"
-        Me.WidthContextMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.WidthContextMenuItem.Size = New System.Drawing.Size(197, 24)
         Me.WidthContextMenuItem.Text = "Width"
         '
         'FontContextMenuItem
         '
         Me.FontContextMenuItem.Name = "FontContextMenuItem"
-        Me.FontContextMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.FontContextMenuItem.Size = New System.Drawing.Size(197, 24)
         Me.FontContextMenuItem.Text = "Font"
         '
         'ClearContextMenuItem
         '
         Me.ClearContextMenuItem.Name = "ClearContextMenuItem"
-        Me.ClearContextMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.ClearContextMenuItem.Size = New System.Drawing.Size(197, 24)
         Me.ClearContextMenuItem.Text = "Clear"
         '
         'GraphicsExamplesForm

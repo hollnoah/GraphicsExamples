@@ -102,4 +102,7 @@ Public Class GraphicsExamplesForm
 
     End Sub
 
+    Private Sub ClearContextMenuItem_Click(sender As Object, e As EventArgs) Handles ClearContextMenuItem.Click
+        Me.Refresh()
+    End Sub
 End Class
