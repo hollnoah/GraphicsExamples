@@ -28,6 +28,7 @@ Partial Class GraphicsExamplesForm
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForegroundColorTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundColorTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ForegroundColorContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,7 +60,7 @@ Partial Class GraphicsExamplesForm
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForegroundColorTopMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForegroundColorTopMenuItem, Me.BackgroundColorTopMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(49, 24)
         Me.EditToolStripMenuItem.Text = "&Edit"
@@ -67,8 +68,14 @@ Partial Class GraphicsExamplesForm
         'ForegroundColorTopMenuItem
         '
         Me.ForegroundColorTopMenuItem.Name = "ForegroundColorTopMenuItem"
-        Me.ForegroundColorTopMenuItem.Size = New System.Drawing.Size(213, 26)
-        Me.ForegroundColorTopMenuItem.Text = "Foreground & Color"
+        Me.ForegroundColorTopMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ForegroundColorTopMenuItem.Text = "&Foreground  Color"
+        '
+        'BackgroundColorTopMenuItem
+        '
+        Me.BackgroundColorTopMenuItem.Name = "BackgroundColorTopMenuItem"
+        Me.BackgroundColorTopMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.BackgroundColorTopMenuItem.Text = "&Background Color"
         '
         'HelpToolStripMenuItem
         '
@@ -159,4 +166,5 @@ Partial Class GraphicsExamplesForm
     Friend WithEvents FontContextMenuItem As ToolStripMenuItem
     Friend WithEvents ClearContextMenuItem As ToolStripMenuItem
     Friend WithEvents DrawingPictureBox As PictureBox
+    Friend WithEvents BackgroundColorTopMenuItem As ToolStripMenuItem
 End Class
