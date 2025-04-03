@@ -4,6 +4,20 @@
 
 Option Strict On
 Option Explicit On
+
+'TODO
+'[] add functionality for all context menu iterms
+'[] background color
+'[] pen width as drop  down or text input with max width defined
+'[] font 
+'[] match functionality between context menu and top menu
+'[] add tooltip on picture box
+'[] plot sine wave
+'[] add erase mode
+'[] draw shape tool 
+'[] add about form
+'[] add splash screen 
+
 Public Class GraphicsExamplesForm
     Function ForeGroundColor(Optional newColor As Color = Nothing) As Color
         Static _foreColor As Color = ForeGroundColor
