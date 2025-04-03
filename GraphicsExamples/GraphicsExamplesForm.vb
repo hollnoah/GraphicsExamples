@@ -80,6 +80,7 @@ Public Class GraphicsExamplesForm
         oldY = e.Y
     End Sub
 
+
     Private Sub ForegroundColorTopMenuItem_Click(sender As Object, e As EventArgs) Handles ForegroundColorTopMenuItem.Click, ForegroundColorContextMenuItem.Click
         Dim result As DialogResult = ColorDialog.ShowDialog()
         If result.ToString = "OK" Then
