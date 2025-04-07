@@ -7,11 +7,11 @@ Option Explicit On
 
 'TODO
 '[] add functionality for all context menu iterms
-'[] background color
-'[] pen width as drop  down or text input with max width defined
-'[] font 
+'   [x] background color
+'   [] pen width as drop  down or text input with max width defined
+'   [] font 
 '[] match functionality between context menu and top menu
-'[] add tooltip on picture box
+'[x] add tooltip on picture box
 '[] plot sine wave
 '[] add erase mode
 '[] draw shape tool 
@@ -105,5 +105,9 @@ Public Class GraphicsExamplesForm
         End If
     End Sub
 
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
 
+        Me.Hide()
+        AboutForm.Show()
+    End Sub
 End Class
