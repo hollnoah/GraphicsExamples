@@ -106,8 +106,16 @@ Public Class GraphicsExamplesForm
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-
         Me.Hide()
         AboutForm.Show()
+    End Sub
+
+    Private Sub GraphicsExamplesForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+    End Sub
+
+    Private Sub GraphicsExamplesForm_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        Me.Hide()
+        SplashForm.Show()
+
     End Sub
 End Class
