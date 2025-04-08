@@ -182,6 +182,7 @@ Partial Class GraphicsExamplesForm
         Me.Controls.Add(Me.TopMenuStrip)
         Me.MainMenuStrip = Me.TopMenuStrip
         Me.Name = "GraphicsExamplesForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.DrawingToolTip.SetToolTip(Me, "This is the form")
         Me.TopMenuStrip.ResumeLayout(False)
