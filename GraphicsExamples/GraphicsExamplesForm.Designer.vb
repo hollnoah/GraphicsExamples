@@ -30,6 +30,7 @@ Partial Class GraphicsExamplesForm
         Me.ForegroundColorTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundColorTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ForegroundColorContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundColorContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,7 +43,6 @@ Partial Class GraphicsExamplesForm
         Me.CustomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DrawingPictureBox = New System.Windows.Forms.PictureBox()
         Me.DrawingToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TopMenuStrip.SuspendLayout()
         Me.MainContextMenuStrip.SuspendLayout()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +89,12 @@ Partial Class GraphicsExamplesForm
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.HelpToolStripMenuItem.Text = "&Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AboutToolStripMenuItem.Text = "&About"
         '
         'MainContextMenuStrip
         '
@@ -165,12 +171,6 @@ Partial Class GraphicsExamplesForm
         Me.DrawingPictureBox.TabIndex = 1
         Me.DrawingPictureBox.TabStop = False
         Me.DrawingToolTip.SetToolTip(Me.DrawingPictureBox, "Right Click For More Options")
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AboutToolStripMenuItem.Text = "&About"
         '
         'GraphicsExamplesForm
         '

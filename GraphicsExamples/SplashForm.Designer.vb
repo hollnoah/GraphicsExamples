@@ -42,6 +42,8 @@ Partial Class SplashForm
         Me.Name = "SplashForm"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "SplashForm"
+        Me.TopMost = True
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
