@@ -28,7 +28,7 @@ Partial Class SplashForm
         '
         'SplashTimer
         '
-        Me.SplashTimer.Interval = 2000
+        Me.SplashTimer.Interval = 1000
         '
         'SplashForm
         '

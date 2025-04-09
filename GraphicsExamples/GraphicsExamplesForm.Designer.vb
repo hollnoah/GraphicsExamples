@@ -43,9 +43,12 @@ Partial Class GraphicsExamplesForm
         Me.CustomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DrawingPictureBox = New System.Windows.Forms.PictureBox()
         Me.DrawingToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ButtonGroupBox = New System.Windows.Forms.GroupBox()
+        Me.WaveButton = New System.Windows.Forms.Button()
         Me.TopMenuStrip.SuspendLayout()
         Me.MainContextMenuStrip.SuspendLayout()
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ButtonGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'TopMenuStrip
@@ -54,7 +57,7 @@ Partial Class GraphicsExamplesForm
         Me.TopMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.TopMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.TopMenuStrip.Name = "TopMenuStrip"
-        Me.TopMenuStrip.Size = New System.Drawing.Size(800, 28)
+        Me.TopMenuStrip.Size = New System.Drawing.Size(791, 28)
         Me.TopMenuStrip.TabIndex = 0
         Me.TopMenuStrip.Text = "MenuStrip1"
         '
@@ -93,7 +96,7 @@ Partial Class GraphicsExamplesForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
         Me.AboutToolStripMenuItem.Text = "&About"
         '
         'MainContextMenuStrip
@@ -167,17 +170,38 @@ Partial Class GraphicsExamplesForm
         Me.DrawingPictureBox.Cursor = System.Windows.Forms.Cursors.AppStarting
         Me.DrawingPictureBox.Location = New System.Drawing.Point(12, 31)
         Me.DrawingPictureBox.Name = "DrawingPictureBox"
-        Me.DrawingPictureBox.Size = New System.Drawing.Size(776, 316)
+        Me.DrawingPictureBox.Size = New System.Drawing.Size(767, 327)
         Me.DrawingPictureBox.TabIndex = 1
         Me.DrawingPictureBox.TabStop = False
         Me.DrawingToolTip.SetToolTip(Me.DrawingPictureBox, "Right Click For More Options")
+        '
+        'ButtonGroupBox
+        '
+        Me.ButtonGroupBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonGroupBox.Controls.Add(Me.WaveButton)
+        Me.ButtonGroupBox.Location = New System.Drawing.Point(3, 377)
+        Me.ButtonGroupBox.Name = "ButtonGroupBox"
+        Me.ButtonGroupBox.Size = New System.Drawing.Size(776, 121)
+        Me.ButtonGroupBox.TabIndex = 2
+        Me.ButtonGroupBox.TabStop = False
+        '
+        'WaveButton
+        '
+        Me.WaveButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WaveButton.Location = New System.Drawing.Point(639, 30)
+        Me.WaveButton.Name = "WaveButton"
+        Me.WaveButton.Size = New System.Drawing.Size(123, 66)
+        Me.WaveButton.TabIndex = 0
+        Me.WaveButton.Text = "&Wave"
+        Me.WaveButton.UseVisualStyleBackColor = True
         '
         'GraphicsExamplesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(791, 508)
         Me.ContextMenuStrip = Me.MainContextMenuStrip
+        Me.Controls.Add(Me.ButtonGroupBox)
         Me.Controls.Add(Me.DrawingPictureBox)
         Me.Controls.Add(Me.TopMenuStrip)
         Me.MainMenuStrip = Me.TopMenuStrip
@@ -189,6 +213,7 @@ Partial Class GraphicsExamplesForm
         Me.TopMenuStrip.PerformLayout()
         Me.MainContextMenuStrip.ResumeLayout(False)
         CType(Me.DrawingPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ButtonGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -214,4 +239,6 @@ Partial Class GraphicsExamplesForm
     Friend WithEvents ErToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DrawingToolTip As ToolTip
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ButtonGroupBox As GroupBox
+    Friend WithEvents WaveButton As Button
 End Class

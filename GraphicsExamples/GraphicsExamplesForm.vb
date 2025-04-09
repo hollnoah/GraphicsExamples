@@ -16,7 +16,7 @@ Option Explicit On
 '[] add erase mode
 '[] draw shape tool 
 '[] add about form
-'[] add splash screen 
+'[x] add splash screen 
 
 Public Class GraphicsExamplesForm
     Function ForeGroundColor(Optional newColor As Color = Nothing) As Color
@@ -58,6 +58,32 @@ Public Class GraphicsExamplesForm
 
 
         g.DrawLine(pen, oldX, oldY, newX, newY)
+        g.Dispose()
+    End Sub
+
+    Sub DrawSinWave()
+        Dim g As Graphics = DrawingPictureBox.CreateGraphics
+        Dim pen As New Pen(Color.Lime)
+        Dim ymax As Integer = 50
+        Dim oldX, oldY, newY As Integer
+
+        For x = 0 To 360
+            newY = CInt(ymax * Math.Sin((Math.PI / 180) * (x * 1)))
+            g.DrawLine(pen, oldX, oldY, x, newY)
+            oldX = x
+            oldY = newY
+            Select Case x
+                Case 90
+                    Console.WriteLine($"x={x} y={newY}")
+                Case 180
+                    Console.WriteLine($"x={x} y={newY}")
+                Case 270
+                    Console.WriteLine($"x={x} y={newY}")
+                Case 360
+                    Console.WriteLine($"x={x} y={newY}")
+            End Select
+        Next
+
         g.Dispose()
     End Sub
 
@@ -118,5 +144,9 @@ Public Class GraphicsExamplesForm
 
         End If
 
+    End Sub
+
+    Private Sub WaveButton_Click(sender As Object, e As EventArgs) Handles WaveButton.Click
+        DrawSinWave()
     End Sub
 End Class
