@@ -64,15 +64,17 @@ Public Class GraphicsExamplesForm
     Sub DrawSinWave()
         Dim g As Graphics = DrawingPictureBox.CreateGraphics
         Dim pen As New Pen(Color.Indigo)
-        Dim ymax As Integer = 50
+        Dim ymax As Integer
         Dim oldX, oldY, newY As Integer
         Dim yOffset As Integer = (DrawingPictureBox.Height \ 2)
+        Dim degreesPerPoint As Double = 360 / DrawingPictureBox.Width
 
+        ymax = yOffset - 1 '-1 cause i was like 1 pixel short, more pleasing to the eye this way
         oldY = yOffset
         ymax *= -1
 
-        For x = 0 To 360
-            newY = CInt(ymax * Math.Sin((Math.PI / 180) * (x * 1))) + yOffset
+        For x = 0 To DrawingPictureBox.Width
+            newY = CInt(ymax * Math.Sin((Math.PI / 180) * (x * degreesPerPoint))) + yOffset
             g.DrawLine(pen, oldX, oldY, x, newY)
             oldX = x
             oldY = newY
@@ -151,6 +153,7 @@ Public Class GraphicsExamplesForm
     End Sub
 
     Private Sub WaveButton_Click(sender As Object, e As EventArgs) Handles WaveButton.Click
+        DrawingPictureBox.Refresh()
         DrawSinWave()
     End Sub
 End Class
