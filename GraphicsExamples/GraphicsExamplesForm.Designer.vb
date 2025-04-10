@@ -166,7 +166,7 @@ Partial Class GraphicsExamplesForm
         Me.DrawingPictureBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DrawingPictureBox.BackColor = System.Drawing.Color.PapayaWhip
+        Me.DrawingPictureBox.BackColor = System.Drawing.Color.White
         Me.DrawingPictureBox.Cursor = System.Windows.Forms.Cursors.AppStarting
         Me.DrawingPictureBox.Location = New System.Drawing.Point(12, 31)
         Me.DrawingPictureBox.Name = "DrawingPictureBox"

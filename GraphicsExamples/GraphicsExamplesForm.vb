@@ -97,7 +97,10 @@ Public Class GraphicsExamplesForm
     'event handlers*****************************************************************************
 
     Private Sub GraphicsExamplesForm_MouseMove(sender As Object, e As MouseEventArgs) Handles DrawingPictureBox.MouseMove, DrawingPictureBox.MouseDown
-        Static oldX, oldY As Integer
+        Static oldX, oldY, lastVerticalLineX As Integer
+        Dim lastColor As Color
+        Dim lastWidth As Integer
+
         Me.Text = $"({e.X},{e.Y}) {e.Button.ToString}"
         Select Case e.Button.ToString
             Case "Left"
@@ -109,7 +112,18 @@ Public Class GraphicsExamplesForm
                 '  DrawWithMouse(DrawingPictureBox.Width \ 2, 0, DrawingPictureBox.Width \ 2, DrawingPictureBox.Height)
 
                 'draw a line top to bottom on the current mouse x location
+                lastColor = ForeGroundColor() 'save user colo
+                lastWidth = PenWidth() ' save user pen width
+                PenWidth(3) 'set wider pen width 
+                ForeGroundColor(BackGroundColor())
+                DrawWithMouse(lastVerticalLineX, 0, lastVerticalLineX, DrawingPictureBox.Height)
+
+                PenWidth(1)
+                ForeGroundColor(lastColor)
                 DrawWithMouse(e.X, 0, e.X, DrawingPictureBox.Height)
+                lastVerticalLineX = e.X
+                PenWidth(lastWidth)
+
         End Select
 
         oldX = e.X
