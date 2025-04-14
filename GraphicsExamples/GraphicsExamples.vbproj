@@ -140,5 +140,8 @@
   <ItemGroup>
     <None Include="Resources\crayons.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaker.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

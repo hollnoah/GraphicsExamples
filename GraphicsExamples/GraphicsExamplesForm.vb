@@ -143,6 +143,12 @@ Public Class GraphicsExamplesForm
     End Sub
 
     Private Sub ClearContextMenuItem_Click(sender As Object, e As EventArgs) Handles ClearContextMenuItem.Click
+        'https://freesound.org/
+        Try
+            My.Computer.Audio.Play(My.Resources.shaker, AudioPlayMode.Background)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
         DrawingPictureBox.Refresh()
     End Sub
 
